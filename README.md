@@ -189,6 +189,8 @@ console.log(isSurnameSayin("Yilmaz")); // false
 
 - Publishing is successfully: Publishing to https://registry.npmjs.org/ with tag latest and default access + check-for-name@1.0.0
 
+- If you continue to develop the project after first release which is version `1.0.0`, you just make your changes, and then go to `package.json`, change the version to something like `1.0.1`, and then publish it. That's all!!
+
 ### Conclusion
 
 - In this short tutorial, I tried to show how an NPM package can be created, tested and published easily. 
