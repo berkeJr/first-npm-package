@@ -107,11 +107,83 @@ https://docs.npmjs.com/cli/v9/using-npm/registry
 }
 
 ```
+##### Create index.js inside package
 
+- Important point here is that main file is `index.js`. So inside `package` folder, we create a file called `index.js`, and inside here is where all of code for package is written.
 
+`package/index.js` 
 
+```js
+const isNameBerke = (string) => {
+  return string === "Berke";
+};
+
+const isSurnameSayin = (string) => {
+  return string === "Sayin";
+};
+
+module.exports = {
+  isNameBerke,
+  isSurnameSayin,
+};
+
+```
 
 ### Testing Package <a name="test-package"></a>
 
+- Testing locally is essential before publishing the package. To do that this command is used: `npm link`
 
+- Make sure you locate `package` at terminal and type in the command `npm link`.
+
+##### npm link 
+
+- The `npm link` command is used for locally testing and developing npm packages. It allows you to create a symbolic link between a globally installed npm package and a local working directory. 
+
+- This is particularly useful when you want to make changes to a package and see the immediate effects in a project that depends on it, without the need to publish the package to the npm registry after every change.
+
+<br>
+
+- Create a `script.js` file inside `tests` folder.
+
+`tests/script.js`
+
+```js
+const { isNameBerke, isSurnameSayin } = require("check-for-name");
+
+
+console.log(isNameBerke("Berke")); // true
+console.log(isNameBerke("Hamza")); // false
+
+console.log(isSurnameSayin("Sayin")); // true
+console.log(isSurnameSayin("Yilmaz")); // false
+
+```
+
+- The name `Berke` and surname `Sayin` are returned as `true` and others are `false` according to the functions for `package` at `package/index.js` file.
+
+##### npm link package-name
+
+- The `package` is needed at tests folder but haven't been deployed yet. So, the solution here is to use `link`.
+
+- Go to terminal and locate at `tests` folder. 
+
+- Type in the command `npm link package-name` which is `npm link check-for-name`.
+
+- Then, at terminal run the command: `node scripts.js`
+
+
+<br>
 ### Publishing Package <a name="publish-package"></a>
+
+- Code is written and tested successfuly, which means it is ready to be published.
+
+##### Steps to publish the package
+
+- Go to https://www.npmjs.com/signup and create an account if you don't have any. 
+
+- Open terminal, locate `package` folder.
+
+- Use `npm login` command to login with the account created earlier.
+
+- Use `npm publish` command to publish the package to NPM. 
+
