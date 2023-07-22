@@ -1,0 +1,22 @@
+{
+  "name": "check-for-name",
+  "version": "1.0.0",
+  "description": "Is the name of user Berke and surname Sayin?",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/berkeJr/first-npm-package.git"
+  },
+  "keywords": [
+    "Name"
+  ],
+  "author": "Berke Sayin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/berkeJr/first-npm-package/issues"
+  },
+  "homepage": "https://github.com/berkeJr/first-npm-package#readme"
+}
