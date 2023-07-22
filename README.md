@@ -187,3 +187,8 @@ console.log(isSurnameSayin("Yilmaz")); // false
 
 - Use `npm publish` command to publish the package to NPM. 
 
+- Publishing is successfully: Publishing to https://registry.npmjs.org/ with tag latest and default access + check-for-name@1.0.0
+
+### Conclusion
+
+- In this short tutorial, I tried to show how an NPM package can be created, tested and published easily. 
